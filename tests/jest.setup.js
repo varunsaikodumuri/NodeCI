@@ -7,5 +7,9 @@ mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
-});
+}).then(() => {
+    console.log("Connected to Database");
+    }).catch((err) => {
+        console.log("Not Connected to Database ERROR in JEST! ", err);
+    });;
 jest.setTimeout(60000);
