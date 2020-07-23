@@ -10,6 +10,6 @@ mongoose.connect(keys.mongoURI, {
 }).then(() => {
     console.log("Connected to Database");
     }).catch((err) => {
-        console.log("Not Connected to Database ERROR in JEST! ", err);
+        console.log("Not Connected to Database ERROR! ", err);
     });;
-jest.setTimeout(60000);
+jest.setTimeout(30000);
